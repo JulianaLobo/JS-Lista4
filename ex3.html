@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 3</title>
+    <script>
+        function calculaDobro(){
+            val = parseFloat(document.getElementById("val").value);
+            document.getElementById("valDobro").value = val*2;
+        }
+    </script>
+</head>
+<body>
+    <form>
+        <label for="val">Digite um valor: </label>
+        <input type="text" id="val"><br><br>
+        <input type="button" value="Mostrar o dobro" onclick="calculaDobro()"><br><br>
+        <label for="valDobro">Dobro do valor: </label>
+        <input type="text" id="valDobro" disabled>
+    </form>
+</body>
+</html>

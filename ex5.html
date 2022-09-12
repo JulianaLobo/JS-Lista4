@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 5</title>
+    <script>
+        function calculaAprovacao() {
+            nota1 = parseFloat(document.getElementById("nota1").value);
+            nota2 = parseFloat(document.getElementById("nota2").value);
+            total = nota1 + nota2;
+            ((total) >= 60) ? alert(`Aprovado! Você passou com ${total} pontos`) : alert(`Reprovado! Faltou ${60 - total} ponto(s) para atingir o mínimo para aprovação (60 pontos)`);
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <label for="nota1">Nota (1º Bimestre): </label>
+        <input type="text" id="nota1"><br><br>
+        <label for="nota2">Nota (2º Bimestre): </label>
+        <input type="text" id="nota2"><br><br>
+        <input type="button" value="Resultado" onclick="calculaAprovacao()">
+    </form>
+</body>
+
+</html>

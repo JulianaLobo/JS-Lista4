@@ -1,0 +1,12 @@
+.alerta{
+    color: red;
+    font-family: Verdana;
+    font-size: 10px;
+}
+
+.titulo {
+    text-align: center;
+    color: blue;
+    font-size: 24px;
+    font-family: Verdana;
+}

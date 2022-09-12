@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 6</title>
+    <script>
+        function calculaAdicao() {
+            valor1 = parseFloat(document.getElementById("valor1").value);
+            valor2 = parseFloat(document.getElementById("valor2").value);
+            // Quando é feito uma conversão para float de uma string vazia ela vira NaN
+             if (valor1 == "" || isNaN(valor1)) {
+                 alert("Digite o 1º valor!");
+                 document.getElementById("valor1").focus();
+             } else if (valor2 == "" || isNaN(valor2)) {
+                 alert("Digite o 2º valor!");
+                 document.getElementById("valor2").focus();
+             } else {
+                document.getElementById("resultado").value = valor1 + valor2;
+            }
+        }
+
+        function calculaSubtracao() {
+            valor1 = parseFloat(document.getElementById("valor1").value);
+            valor2 = parseFloat(document.getElementById("valor2").value);
+
+             if (valor1 == "" || isNaN(valor1)) {
+                 alert("Digite o 1º valor!");
+                 document.getElementById("valor1").focus();
+             } else if (valor2 == "" || isNaN(valor2)) {
+                 alert("Digite o 2º valor!");
+                 document.getElementById("valor2").focus();
+             } else {
+                document.getElementById("resultado").value = valor1 - valor2;
+            }
+        }
+
+        function calculaMultiplicacao() {
+            valor1 = parseFloat(document.getElementById("valor1").value);
+            valor2 = parseFloat(document.getElementById("valor2").value);
+
+             if (valor1 == "" || isNaN(valor1)) {
+                 alert("Digite o 1º valor!");
+                 document.getElementById("valor1").focus();
+             } else if (valor2 == "" || isNaN(valor2)) {
+                 alert("Digite o 2º valor!");
+                 document.getElementById("valor2").focus();
+             } else {
+                document.getElementById("resultado").value = valor1 * valor2;
+            }
+        }
+
+        function calculaDivisao() {
+            valor1 = parseFloat(document.getElementById("valor1").value);
+            valor2 = parseFloat(document.getElementById("valor2").value);
+
+             if (valor1 == "" || isNaN(valor1)) {
+                 alert("Digite o 1º valor!");
+                 document.getElementById("valor1").focus();
+             } else if (valor2 == "" || isNaN(valor2) || valor2 == 0) {
+                 alert("Digite o 2º valor. Não pode ser igual a zero!");
+                 document.getElementById("valor2").focus();
+             } else {
+                document.getElementById("resultado").value = valor1 / valor2;
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <form>
+        <p style="font-weight: bold;">Calculadora</p>
+        <label for="valor1">1º Valor: </label>
+        <input type="text" id="valor1"><br> <br>
+        <label for="valor1">2º Valor: </label>
+        <input type="text" id="valor2"><br><br>
+        <input type="button" value="+" onclick="calculaAdicao()">
+        <input type="button" value="-" onclick="calculaSubtracao()">
+        <input type="button" value="*" onclick="calculaMultiplicacao()">
+        <input type="button" value="/" onclick="calculaDivisao()"><br><br>
+        <label for="resultado">Resultado</label>
+        <input type="text" id="resultado" disabled>
+
+
+    </form>
+</body>
+
+</html>

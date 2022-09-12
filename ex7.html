@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercício 7</title>
+    <link rel="stylesheet" href="estilos.css">
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <fieldset style="width: 500px; margin: 0px auto;">
+        <h2 class="titulo" style="text-align: center; color: blue;">Acesso ao Sistema</h3>
+            <form style="text-align: center;">
+                <table style="padding-bottom: 15px;">
+                    <tr>
+                        <td style="text-align: right;"><label for="login">Login: </label></td>
+                        <td style="text-align: left;"><input type="text" id="login"></td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;"><label for="senha">Senha: </label></td>
+                        <td style="text-align: left;"><input type="password" id="senha" maxlength="8"></td>
+                        <td class="alerta" style="text-align: left;"><span>(máx. 8 caracteres)</span></td>
+                        
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;"><label for="confSenha">Confirmar senha: </label></td>
+                        <td style="text-align: left;"><input type="password" id="confSenha" maxlength="8"></td>
+                        <td class="alerta" style="text-align: left;"><span>(máx. 8 caracteres)</span></td>
+                    </tr>
+                </table>
+                <input type="button" value="Entrar" onclick="validaLogin()">
+                <input type="reset" value="Limpar">
+            </form>
+    </fieldset>
+</body>
+
+</html>
